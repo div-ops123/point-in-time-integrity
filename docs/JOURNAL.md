@@ -63,3 +63,24 @@ event's mention count grow, the project now measures the total count
 of Hormuz-related event records known by a given cutoff versus known
 today — the same underlying question ("what did we actually know as
 of this date") applied at the level the data actually supports.
+
+## Running the corridor-level query
+
+Ran the corridor-level query against the `events` table: counting
+Hormuz-related events known by March 2, March 5, and March 10, versus
+the total known today. Result:
+
+| Cutoff | Events known |
+|---|---|
+| By Mar 2 | 7 |
+| By Mar 5 | 14 |
+| By Mar 10 | 30 |
+| Today | 75 |
+
+This is the first result in the whole investigation that actually
+showed clean, compounding growth rather than a flat or empty number.
+It confirmed the pivot from single-event mentions to corridor-level
+event counts was the right level to measure at. Using today's count
+as a stand-in for what was known on March 2 would overstate it by
+roughly 10.7x. This became the core proof for the project — recorded
+in `results/` and referenced in `docs/PROBLEM.md`.
